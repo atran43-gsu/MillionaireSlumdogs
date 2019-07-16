@@ -6,3 +6,21 @@
     padding: 1em;
     background-color: green;
 }
+
+/* .hidden {
+    display: none;
+} */
+
+.choice-button {
+    width: 20%;
+    padding: 1em;
+}
+
+.progress--step {
+    padding: 1em;
+    background-color: brown;
+}
+
+/* #quizcontent, #win, #lose {
+    display: none;
+} */

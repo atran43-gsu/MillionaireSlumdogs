@@ -15,46 +15,48 @@
 
 <body>
 	<h1> Who Wants To Be the Millionaire? </h1>
-	<div id="progress"> </div>
+	<div id="progress">
+		<div id="100" class="progress--step">100</div>
+		<div id="200" class="progress--step">200</div>
+		<div id="500" class="progress--step">500</div>
+		<div id="1000"class="progress--step">1000</div>
+	</div>
 	<div id="leaderboard"> </div>
 	<div id="win">
+		<form method="post" action="php/outDebug.php" class="choice">
+			<div class="keep-playing choice-button">Keep playing</div>
+			<div class="take-money choice-button">Take money</div>
+			<input type="submit" value="Submit" class="hidden">
+			<input class="hidden choice-score" type="number" name="SCORE">
+			<input class="hidden choice-input" type="radio" checked="checked" name="KEEPPLAYING" value="1">
+		</form>
 	</div>
 	<div id="lose">
+		<p>You lose</p>
+		<a href="register.html">Click to play again.</a>
 	</div>
-	<form action="php/outDebug.php" class="take-money">
-		<label class="take-money">
-			<input type="radio" checked="checked" name="radio" class="answer-value-1" value="">
-			<span class="custom answer-text-1"></span>
-		</label>
-		<input type="submit" value="Submit">
-	</form>
-	<form action="php/outDebug.php" class="keep-playing">
-		<label class="keep-playing">
-			<input type="radio" checked="checked" name="radio" class="answer-value-1" value="">
-			<span class="custom answer-text-1"></span>
-		</label>
-		<input type="submit" value="Submit">
-	</form>
 	<div id="quizcontent">
 		<div id="question" class="question"> </div>
 		<form method="post" action="php/outDebug.php" onsubmit="">
 			<label id="a1">
-				<input type="radio" checked="checked" name="radio" class="answer-value-1" value="">
+				<input type="radio" checked="checked" name="ANSWER" class="answer-value-1" value="">
 				<span class="custom answer-text-1"></span>
 			</label>
 			<label id="a2">
-				<input type="radio" checked="checked" name="radio" class="answer-value-2" value="">
+				<input type="radio" checked="checked" name="ANSWER" class="answer-value-2" value="">
 				<span class="custom answer-text-2"></span>
 			</label>
 			<label id="a3">
-				<input type="radio" checked="checked" name="radio" class="answer-value-3" value="">
+				<input type="radio" checked="checked" name="ANSWER" class="answer-value-3" value="">
 				<span class="custom answer-text-3"></span>
 			</label>
 			<label id="a4">
-				<input type="radio" checked="checked" name="radio" class="answer-value-4" value="">
+				<input type="radio" checked="checked" name="ANSWER" class="answer-value-4" value="">
 				<span class="custom answer-text-4"></span>
 			</label>
 			<input type="submit" value="Submit">
+			<input class="hidden answer-score" type="number" name="SCORE">
+			<input class="hidden question-ID" type="text" name="QID">
 		</form>
 	</div>
   	<script src="js/scripts.js"></script>
