@@ -1,10 +1,5 @@
-
-/*important: assummes that the var name from PHP back end is as follow
-please confirm with Steve*/
-
-
-/*!!! var for test
-PLEASE COMMENT THEM OUT WHEN MERGE TO PHP*/
+/*var for test
+!!! PLEASE COMMENT THEM OUT WHEN MERGE TO PHP*/
 let state = "NEWQ";
 var q = "What is what waht";
 var a1 = "answer 1 yse yse";
@@ -13,9 +8,7 @@ var a3 = "answer 3 iunkdf";
 var a4 = "answer  4 ewsdf";
 var score = 500;
 
-
 /**end var for test */
-
 
 /**list of nodes */
 let choiceScore = document.querySelector(".choice-score");
@@ -46,7 +39,6 @@ let takeMoneyButton = document.querySelector(".take-money");
 
 /**end list of nodes */
 
-
 /**first thing: update score and progress*/
 let firstActions = function () {
     //update score
@@ -62,8 +54,6 @@ let firstActions = function () {
         }
     }
 }
-
-
 
 /**update questions */
 let updateQuestion = function () {
@@ -97,7 +87,6 @@ let loseAction = function () {
 };
 
 /* choices */
-
 // function run when choose
 let submitChoice = function (eventObject) {
     if (eventObject.target === keepPlayingButton) {
@@ -113,23 +102,8 @@ keepPlayingButton.addEventListener("click", submitChoice);
 takeMoneyButton.addEventListener("click", submitChoice);
 
 
-/**cases
- * fron back to front:
-
-    +update questions --done
-    +update result
-     - when wrong: 
-        display wrong
-     - when right:
-        display righ
-    +update point list
-        display what to be done
- */
-
-
-/* Runtime calls
- *
- *
+/*
+ * Runtime calls
  */
 
 /*what function to run based on state*/
