@@ -1,14 +1,17 @@
 
 /*important: assummes that the var name from PHP back end is as follow
 please confirm with Steve*/
-/*var for test*/
-// let state = "NEWQ";
-// var q = "What is what waht";
-// var a1 = "answer 1 yse yse";
-// var a2 = "answer 2 bla bal";
-// var a3 = "answer 3 iunkdf";
-// var a4 = "answer  4 ewsdf";
-// var score = 700;
+
+
+/*!!! var for test
+PLEASE COMMENT THEM OUT WHEN MERGE TO PHP*/
+let state = "NEWQ";
+var q = "What is what waht";
+var a1 = "answer 1 yse yse";
+var a2 = "answer 2 bla bal";
+var a3 = "answer 3 iunkdf";
+var a4 = "answer  4 ewsdf";
+var score = 500;
 
 
 /**end var for test */
@@ -41,7 +44,6 @@ let choiceState = document.querySelector(".choice-state");
 let keepPlayingButton = document.querySelector(".keep-playing");
 let takeMoneyButton = document.querySelector(".take-money");
 
-
 /**end list of nodes */
 
 
@@ -54,7 +56,7 @@ let firstActions = function () {
     //update progress
     for (let i = 0; i < 1000000; i = i + 100) {
         let element = document.getElementById(i);
-        if (element && (parseInt(element.id) < score)) {
+        if ( element && (parseInt(element.id) <= score) ) {
             //Toan, you can change appreance of element here by javascript
             element.style.backgroundColor = "blue";
         }
@@ -125,10 +127,15 @@ takeMoneyButton.addEventListener("click", submitChoice);
  */
 
 
-/*list of what finction to run based on state*/
+/* Runtime calls
+ *
+ *
+ */
+
+/*what function to run based on state*/
 firstActions();
-state === "CORRECT" && winAction();
+state === "CORRECT" && winAction(); //short hand, similar to if statement
 state === "INCORRECT" && loseAction();
-state === "NEWQ" && updateQuestion(); //when new questions pops up
+state === "NEWQ" && updateQuestion();
 
 console.log("test: code ran through");

@@ -7,10 +7,6 @@
     background-color: green;
 }
 
-/* .hidden {
-    display: none;
-} */
-
 .choice-button {
     width: 20%;
     padding: 1em;
@@ -21,6 +17,11 @@
     background-color: brown;
 }
 
-/* #quizcontent, #win, #lose {
+
+/*code needed in real runtime*/
+/* .hidden { 
+    display: none;
+}
+#quizcontent, #win, #lose { 
     display: none;
 } */
