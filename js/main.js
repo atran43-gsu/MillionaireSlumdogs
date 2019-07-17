@@ -2,14 +2,13 @@
 /*important: assummes that the var name from PHP back end is as follow
 please confirm with Steve*/
 /*var for test*/
-let STATE = "NEWQ";
-let QID = "QW2";
-var Q = "What is what waht";
-var A1 = "answer 1 yse yse";
-var A2 = "answer 2 bla bal";
-var A3 = "answer 3 iunkdf";
-var A4 = "answer  4 ewsdf";
-var SCORE = 700;
+// let state = "NEWQ";
+// var q = "What is what waht";
+// var a1 = "answer 1 yse yse";
+// var a2 = "answer 2 bla bal";
+// var a3 = "answer 3 iunkdf";
+// var a4 = "answer  4 ewsdf";
+// var score = 700;
 
 
 /**end var for test */
@@ -38,7 +37,7 @@ let loseContainer = document.querySelector("#lose");
 let winContainer = document.querySelector("#win");
 
 let choiceForm = document.querySelector(".choice");
-let choiceInput = document.querySelector(".choice-input");
+let choiceState = document.querySelector(".choice-state");
 let keepPlayingButton = document.querySelector(".keep-playing");
 let takeMoneyButton = document.querySelector(".take-money");
 
@@ -49,13 +48,13 @@ let takeMoneyButton = document.querySelector(".take-money");
 /**first thing: update score and progress*/
 let firstActions = function () {
     //update score
-    choiceScore.value = SCORE;
-    answerScore.value = SCORE;
+    choiceScore.value = score;
+    answerScore.value = score;
 
     //update progress
     for (let i = 0; i < 1000000; i = i + 100) {
         let element = document.getElementById(i);
-        if (element && (parseInt(element.id) < SCORE)) {
+        if (element && (parseInt(element.id) < score)) {
             //Toan, you can change appreance of element here by javascript
             element.style.backgroundColor = "blue";
         }
@@ -70,20 +69,19 @@ let updateQuestion = function () {
     quizContent.style.display = "block";
 
     //update question ID
-    questionID.value = QID;
-    question.innerHTML= Q;
+    question.innerHTML= q;
 
-    ansVal1.value = A1;
-    ansText1.innerHTML = A1;
+    ansVal1.value = a1;
+    ansText1.innerHTML = a1;
 
-    ansVal2.value = A2;
-    ansText2.innerHTML = A2;
+    ansVal2.value = a2;
+    ansText2.innerHTML = a2;
 
-    ansVal3.value = A3;
-    ansText3.innerHTML = A3;
+    ansVal3.value = a3;
+    ansText3.innerHTML = a3;
 
-    ansVal4.value = A4;
-    ansText4.innerHTML = A4;
+    ansVal4.value = a4;
+    ansText4.innerHTML = a4;
 };
 
 /**when win */
@@ -101,10 +99,10 @@ let loseAction = function () {
 // function run when choose
 let submitChoice = function (eventObject) {
     if (eventObject.target === keepPlayingButton) {
-        choiceInput.setAttribute("name", "KEEPPLAYING");
+        choiceState.setAttribute("value", "KEEPPLAYING");
     }
     else {
-        choiceInput.setAttribute("name", "TAKEMONEY");
+        choiceState.setAttribute("value", "TAKEMONEY");
     }
     choiceForm.submit();
 };
@@ -129,8 +127,8 @@ takeMoneyButton.addEventListener("click", submitChoice);
 
 /*list of what finction to run based on state*/
 firstActions();
-STATE === "CORRECT" && winAction();
-STATE === "INCORRECT" && loseAction();
-STATE === "NEWQ" && updateQuestion(); //when new questions pops up
+state === "CORRECT" && winAction();
+state === "INCORRECT" && loseAction();
+state === "NEWQ" && updateQuestion(); //when new questions pops up
 
 console.log("test: code ran through");

@@ -27,8 +27,8 @@
 			<div class="keep-playing choice-button">Keep playing</div>
 			<div class="take-money choice-button">Take money</div>
 			<input type="submit" value="Submit" class="hidden">
-			<input class="hidden choice-score" type="number" name="SCORE">
-			<input class="hidden choice-input" type="radio" checked="checked" name="KEEPPLAYING" value="1">
+			<input class="hidden choice-score" type="number" name="score">
+			<input class="hidden choice-state" type="text" name="state" value="">
 		</form>
 	</div>
 	<div id="lose">
@@ -39,23 +39,24 @@
 		<div id="question" class="question"> </div>
 		<form method="post" action="php/outDebug.php" onsubmit="">
 			<label id="a1">
-				<input type="radio" checked="checked" name="ANSWER" class="answer-value-1" value="">
+				<input type="radio" checked="checked" name="answer" class="answer-value-1" value="">
 				<span class="custom answer-text-1"></span>
 			</label>
 			<label id="a2">
-				<input type="radio" checked="checked" name="ANSWER" class="answer-value-2" value="">
+				<input type="radio" checked="checked" name="answer" class="answer-value-2" value="">
 				<span class="custom answer-text-2"></span>
 			</label>
 			<label id="a3">
-				<input type="radio" checked="checked" name="ANSWER" class="answer-value-3" value="">
+				<input type="radio" checked="checked" name="answer" class="answer-value-3" value="">
 				<span class="custom answer-text-3"></span>
 			</label>
 			<label id="a4">
-				<input type="radio" checked="checked" name="ANSWER" class="answer-value-4" value="">
+				<input type="radio" checked="checked" name="answer" class="answer-value-4" value="">
 				<span class="custom answer-text-4"></span>
 			</label>
 			<input type="submit" value="Submit">
-			<input class="hidden answer-score" type="number" name="SCORE">
+			<input class="hidden answer-score" type="number" name="score">
+			<input class="hidden answer-state" type="text" name="state" value="ANSWERQUESTION">
 			<input class="hidden question-ID" type="text" name="QID">
 		</form>
 	</div>
