@@ -7,10 +7,15 @@ var a2 = "answer 2 bla bal";
 var a3 = "answer 3 iunkdf";
 var a4 = "answer  4 ewsdf";
 var score = 500;
+let highScore = 500000;
+let highScorePlayer = "Jane Smith";
 
 /**end var for test */
 
 /**list of nodes */
+let highScoreDisplay = document.querySelector(".high-score");
+let highScorePlayerDisplay = document.querySelector(".high-score-player");
+
 let choiceScore = document.querySelector(".choice-score");
 let answerScore = document.querySelector(".answer-score");
 
@@ -46,13 +51,17 @@ let firstActions = function () {
     answerScore.value = score;
 
     //update progress
-    for (let i = 0; i < 1000000; i = i + 100) {
+    for (let i = 0; i <= 1000000; i = i + 100) {
         let element = document.getElementById(i);
         if ( element && (parseInt(element.id) <= score) ) {
             //Toan, you can change appreance of element here by javascript
             element.style.backgroundColor = "blue";
         }
     }
+
+    //update highscore and highscore player
+    highScoreDisplay.innerHTML = highScore;
+    highScorePlayerDisplay.innerHTML = highScorePlayer;
 }
 
 /**update questions */

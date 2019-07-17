@@ -1,4 +1,6 @@
 http://codd.cs.gsu.edu/~atran43/web/projects/MillionaireSlumdogs/main.html
+http://stevefassnacht.com/millionaire/register.html
+
 
 from backend to fronent:
 
