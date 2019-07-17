@@ -1,14 +1,14 @@
 /*var for test
 !!! PLEASE COMMENT THEM OUT WHEN MERGE TO PHP*/
-let state = "NEWQ";
-var q = "What is what waht";
-var a1 = "answer 1 yse yse";
-var a2 = "answer 2 bla bal";
-var a3 = "answer 3 iunkdf";
-var a4 = "answer  4 ewsdf";
-var score = 500;
-let highScore = 500000;
-let highScorePlayer = "Jane Smith";
+// let state = "NEWQ";
+// var q = "What is what waht";
+// var a1 = "answer 1 yse yse";
+// var a2 = "answer 2 bla bal";
+// var a3 = "answer 3 iunkdf";
+// var a4 = "answer  4 ewsdf";
+// var score = 500;
+// let highScore = 500000;
+// let highScorePlayer = "Jane Smith";
 
 /**end var for test */
 
