@@ -46,18 +46,26 @@ let takeMoneyButton = document.querySelector(".take-money");
 
 /**first thing: update score and progress*/
 let firstActions = function () {
-    //update score
-    choiceScore.value = score;
-    answerScore.value = score;
-
+    let updatedScore; //new
+    let triggerd = false; //new
     //update progress
     for (let i = 0; i <= 1000000; i = i + 100) {
         let element = document.getElementById(i);
-        if ( element && (parseInt(element.id) <= score) ) {
+        if (element && triggerd) {
+            updatedScore = score + parseInt(element.id); 
+        }
+        if ( element && (parseInt(element.id) === score) ) {
             //Toan, you can change appreance of element here by javascript
             element.style.backgroundColor = "blue";
+            triggerd = true;
         }
+
     }
+
+
+    //update score
+    choiceScore.value = score; // new
+    answerScore.value = score; // new
 
     //update highscore and highscore player
     highScoreDisplay.innerHTML = highScore;
